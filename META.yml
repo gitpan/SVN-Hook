@@ -13,4 +13,4 @@ no_index:
 requires: 
   Class::Accessor::Fast: 0
   Path::Class: 0
-version: 0.26
+version: 0.27

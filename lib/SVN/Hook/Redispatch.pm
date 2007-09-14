@@ -17,7 +17,7 @@ sub import {
     # hooks/pre-commit itself
 
     if ($hook_base->parent =~ m'hooks$') { # the hook file itself
-	my $type = $hook_base->basename;
+	$type = $hook_base->basename;
 	$hook_base = $hook_base->parent->subdir("_".$type);
     }
     else {
