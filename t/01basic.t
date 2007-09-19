@@ -1,9 +1,9 @@
 #!/usr/bin/perl -w
 
-use Test::More; 
-eval { use SVK::Test; 1 }
+use Test::More;
+eval { require SVK::Test; 1 }
     or plan skip_all => 'requires SVK for testing.';
-
+SVK::Test->import;
 use SVK::Util 'can_run';
 $ENV{SVNLOOK} ||= can_run('svnlook')
     or plan skip_all => 'requires svnlook testing.';
